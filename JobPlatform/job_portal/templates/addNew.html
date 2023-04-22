@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+<html>
+    <head>
+        {% block title %}<title>Add New</title>{% endblock %}
+    </head>
+    <body>
+        <section class="content">
+        {% block content %}
+            <h3>New Job Form</h3>
+            <div class="register">
+                <form action="addNew/" method="POST">
+                    {% csrf_token %}
+                    <label>Job Title: </label><input type="text" name="title" placeholder="Title"><br>
+                    <label>Location: </label><input type="text" name="location" placeholder="Location"><br>
+                    <label>Company Name: </label><input type="text" name="companyName" placeholder="Company Name"><br>
+                    <label>Responsibilities: </label><input type="text" name="responsibilities" placeholder="Responsibilities"><br>
+                    <label>Requirements: </label><input type="text" name="requirements" placeholder="Requirements"><br>
+                    <button type="submit" name="save">Save</button>
+                </form>
+            </div>
+            
+        <div class="back">
+            <p>Back to <a href="/">Home</a></p>
+        </div>
+        {% endblock %}
+        </section>
+    </body>
+</html>
