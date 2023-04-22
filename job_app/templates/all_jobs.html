@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<!-- <h1>Jobs</h1> -->
+  
+{% extends "master.html" %}
+
+{% block title %}
+  Job Portal
+{% endblock %}
+
+
+{% block content %}
+  <!-- <h1>Jobs</h1> -->
+  
+  <ul>
+    {% for x in job_info %}
+      <li><a href="job_details/{{ x.id }}">{{ x.title }} {{ x.company }}  {{ x.location }}</a></li>
+    {% endfor %}
+  </ul>
+{% endblock %}
+
+</body>
+</html>
+
+
