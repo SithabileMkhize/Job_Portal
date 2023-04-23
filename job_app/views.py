@@ -27,6 +27,9 @@ def index(request):
   template = loader.get_template('index.html')
   return HttpResponse(template.render())
 
+def main(request):
+  return HttpResponse("API Project")
+
 
 def all_jobs(request):
   template = loader.get_template('all_jobs.html')
