@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+{% extends "master.html" %}
+
+{% block title %}
+    Details about {{ job_info.title }} {{ job_info.company }}  {{ job_info.location }}
+{% endblock %}
+
+<h1>{{ job_info.title }} {{ job_info.company }}  {{ job_info.location }}</h1>
+  
+<p>Description: {{ job_info.description }}</p>
+<p>Salary: {{ job_info.salary }}</p>
+<p>Level: {{ job_info.level}}</p>
+
+<p>Back to <a href="/all_jobs">Jobs</a></p>
+
+{% endblock %}
+
+</body>
+</html>
+
+
